@@ -4,6 +4,9 @@ const app = express();
 app.use(express.json());
 
 app.post('/chat', (req, res) => {
+    if (!message) {
+        return res.json({ reply: "Введите сообщение" });
+    }
     const message = req.body.message;
 
     let reply = "Не понимаю";
