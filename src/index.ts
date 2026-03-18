@@ -8,9 +8,11 @@ app.post('/chat', (req, res) => {
 
     let reply = "Не понимаю";
 
-    if (message.includes("привет")) {
-        reply = "Привет!";
-    }
+    if (message.toLowerCase().includes("привет")) {
+    reply = "Привет!";
+} else if (message.toLowerCase().includes("как дела")) {
+    reply = "У меня всё отлично!";
+}
 
     res.json({ reply });
 });
