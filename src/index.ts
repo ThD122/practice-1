@@ -13,7 +13,7 @@ app.post('/chat', (req, res) => {
 } else if (message.toLowerCase().includes("как дела")) {
     reply = "У меня всё отлично!";
 }
-
+    console.log(`User: ${message} | Bot: ${reply}`);
     res.json({ reply });
 });
 
